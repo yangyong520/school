@@ -61,6 +61,8 @@ export default {
     }
   },
   mounted () {
+      console.log(on)
+
     this.$nextTick(() => {
       let xAxisData = this.xData
       let seriesData = this.value

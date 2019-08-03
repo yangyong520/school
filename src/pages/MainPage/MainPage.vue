@@ -278,8 +278,10 @@ export default {
         for(let key in this.routerPath){
           if(this.routerPath[key].name === '首页'){
             this.routerPath.splice(key,1)
-            console.log(this.leftSideArr[0].children[0].keyName)
-            this.$router.push(this.leftSideArr[0].children[0].keyName)
+            // console.log(this.leftSideArr[0].children[0].keyName)
+            if(this.leftSideArr[0].children && this.leftSideArr[0].children[0]){
+              this.$router.push(this.leftSideArr[0].children[0].keyName)
+            }
           }
         }
       }
